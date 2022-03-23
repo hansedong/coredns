@@ -278,6 +278,6 @@ func TestHealthDomain(t *testing.T) {
 	time.Sleep(20 * time.Millisecond)
 	i1 := atomic.LoadUint32(&i)
 	if i1 != 1 {
-		t.Errorf("Expected number of health checks with RecursionDesired==false to be %d, got %d", 1, i1)
+		t.Errorf("Expected number of health checks with Domain==%s to be %d, got %d", hcDomain, 1, i1)
 	}
 }
